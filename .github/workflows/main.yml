@@ -1,9 +1,12 @@
 name: Generate Datas
 
 on:
-  schedule: # execute every 12 hours
+  schedule:
     - cron: "0 */12 * * *"
   workflow_dispatch:
+
+permissions:
+  contents: write  # ✅ Grant write permission to the bot
 
 jobs:
   build:
