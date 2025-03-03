@@ -8,6 +8,9 @@ on:
     - cron: "0 0 * * *"  # Runs daily at midnight UTC
   workflow_dispatch:  # Allows manual triggering
 
+permissions:
+  contents: write  # ✅ Grant write permission to the bot
+  
 jobs:
   generate-snake:
     runs-on: ubuntu-latest
